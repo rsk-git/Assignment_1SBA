@@ -1,0 +1,15 @@
+body{
+    background-color: chartreuse;
+}
+
+img{
+    border-top-width: 20px;
+    width: 220px;
+}
+.skills{
+    text-emphasis-color: blue;
+    background-color: aqua;
+}
+$EDUCATION{
+    
+}

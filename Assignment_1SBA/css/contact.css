@@ -1,0 +1,40 @@
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-style: solid black;
+}
+
+
+section{
+    justify-content: space-around;
+    border-style: solid black;
+    background-color:rgba(210, 223, 193, 0.753);
+    text-align: left;
+    font-size: 20px;
+}
+body{
+    text-align: left;
+    background-color: rgb(231, 235, 224);
+    display: inline;
+    align-items:left;
+    margin-right: 20px;
+    border-style: solid black;
+  
+}
+    
+
+
+h1,h2,h3{
+    background-color: cornflowerblue;
+}
+button{
+    font-size: large;
+}
+#email{
+    white-space: no-wrap;
+}
+.animated-submit:hover {
+    background-color: #615aa9;
+    transform: scale(1.0);
+}

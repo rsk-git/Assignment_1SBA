@@ -1,0 +1,47 @@
+
+
+h2{
+    text-align: left;
+    padding: 10px;
+    color: aqua;
+}
+header{
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-style: solid black;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: medium;
+}
+body{
+    text-align: left;
+    background-color: rgb(160, 167, 166);
+    display: inline;
+    align-items:left;
+    margin-right: 20px;
+    border-style: solid black;
+    }
+    img{
+        border-color: #0b110b;
+        max-height: 250px;
+        margin-top: 20px;
+        width: 520px;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 10px, 5px, 5px, aquamarine;
+        object-fit: fill;
+        
+       
+        
+   
+    }
+    #species {
+        color: rgb(176, 101, 47);
+    }
+  
+
+    

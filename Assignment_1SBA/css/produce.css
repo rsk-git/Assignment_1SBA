@@ -1,0 +1,50 @@
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-style: solid black;
+}
+
+
+section{
+    justify-content: space-around;
+    border-style: solid black;
+  
+    text-align: left;
+    font-size: 20px;
+}
+body{
+    text-align: left;
+    background-color: rgb(231, 235, 224);
+    display: inline;
+    align-items:left;
+    margin-right: 20px;
+    border-style: solid black;
+  }
+button{
+    font-size: large;
+}
+
+column{
+    float: right;
+    width: 33.33%;
+    padding: 10px;
+    padding-right: 20px;
+    padding-inline;
+}
+    
+img{
+    height: 450px;
+    align-items: stretch;
+    margin-top: 30px;
+    width: 420px;
+    border-style: solid black;
+}
+h1,h2{
+
+    background-color: cornflowerblue;
+}
+.class{
+    float: left;
+    width: 33%;
+}

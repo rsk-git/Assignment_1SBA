@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Garden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #45a049;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #388e3c;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .main-content {
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: calc(33% - 20px);
+            height: auto;
+            border-radius: 8px;
+        }
+        .events-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .events-list li {
+            background-color: #e2e2e2;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #388e3c;
+        }
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+            nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Community Garden</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#events">Events</a>
+            <a href="#blog">Blog</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="main-content">
+            <h2>Welcome to the Community Garden</h2>
+            <p>Our community garden is a place where locals come together to grow and nurture plants, share knowledge, and enjoy the beauty of nature.</p>
+        </section>
+
+        <section id="about" class="main-content">
+            <h2>About Us</h2>
+            <p>We are a dedicated group of community members committed to promoting sustainable gardening and creating a green space for everyone to enjoy.</p>
+        </section>
+
+        <section id="events" class="main-content">
+            <h2>Upcoming Events</h2>
+            <ul class="events-list">
+                <li>
+                    <h3>Planting Day</h3>
+                    <p>Date: August 15, 2024</p>
+                    <p>Join us for a day of planting and learning about new gardening techniques.</p>
+                </li>
+                <li>
+                    <h3>Harvest Festival</h3>
+                    <p>Date: September 10, 2024</p>
+                    <p>Celebrate the harvest season with food, music, and fun activities.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="blog" class="main-content">
+            <h2>Blog</h2>
+            <p>Check out our latest blog posts for gardening tips, community stories, and more.</p>
+            <!-- Blog posts would go here -->
+        </section>
+
+        <section id="gallery" class="main-content">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="garden1.jpg" alt="Garden Image 1">
+                <img src="garden2.jpg" alt="Garden Image 2">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+
+        <section id="contact" class="main-content">
+            <h2>Contact Us</h2>
+            <form action="/submit_form" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Community Garden. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
