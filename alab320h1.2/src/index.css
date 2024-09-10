@@ -1,0 +1,61 @@
+html {
+    border-left: 5px solid lightgray;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+header, main, footer{
+    padding: 1rem 2 rem;
+}
+
+h1{
+    color: tomato;
+}
+article h2{
+    font-size: 1.75rem;
+}
+article a.continues {
+    float: right;
+    font-weight: bold;
+    color: tomato;
+    text-decoration:none;
+}
+artilce img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+    display: flex;
+    justify-content: space-between;
+}
+nav[aria-label = "Main Navigation"] a {
+color: lightgray;
+text-decoration: none;
+}
+
+nav[aria-label = "Footer avigation"] a {
+    color: tomato;
+    text-decoration: none;
+    }
+
+article {
+    margin-bottom: 4 rem;
+    border-bottom: 1 px solid lightgray;
+    padding-bottom: 2rem;
+}
+
+article p::first-letter {
+    font-size: 2rem;
+    color: lightgray;
+    font-weight: bold;
+}
+footer p {
+    color: lightgray;
+}
