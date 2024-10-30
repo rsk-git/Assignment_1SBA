@@ -13,21 +13,25 @@ const CreateRecipe = () => {
         e.preventDefault();
         setError('');
         setSuccess(false);
-
-        // Log the data being sent
-        console.log("Data being sent to server:", {
+    
+        const recipeData = {
             title,
             ingredients: ingredients.split(',').map(ingredient => ingredient.trim()),
             instructions,
-        });
-
+        };
+    
+        console.log("Data being sent to server:", recipeData); // Debugging line
+    
         try {
-            const response = await axios.post('http://localhost:3000/api/recipes', {
-                title,
-                ingredients: ingredients.split(',').map(ingredient => ingredient.trim()),
-                instructions,
+            // Retrieve token from localStorage
+            const token = localStorage.getItem('token');
+            
+            const response = await axios.post('http://localhost:3000/api/recipes', recipeData, {
+                headers: {
+                    Authorization: `Bearer ${token}`, // Attach token in the Authorization header
+                },
             });
-
+    
             if (response.status === 201) {
                 setSuccess(true);
                 setTitle('');
@@ -37,14 +41,11 @@ const CreateRecipe = () => {
                 setError('Unexpected response from server.');
             }
         } catch (error) {
-            // Log the full error to understand what Axios is catching
-            console.error('Error creating recipe:', error);
-        
-            // Set a generic error message for the user
-            setError('Failed to create recipe. Please try again.');
+            console.error('Error creating recipe:', error.response ? error.response.data : error.message);
+            setError(error.response?.data?.error || 'Unexpected response from server.');
         }
-        
     };
+    
 
     return (
         <div className="create-recipe-container">
