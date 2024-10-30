@@ -6,28 +6,24 @@ import homepageGif from "../assets/7GpG.gif";
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
-
+// getting user details from the local storage
     const username = localStorage.getItem('username');
     const picture = localStorage.getItem('picture');
-
+// update searchTerm as user fills the input field.
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
     };
-
+// search form submission handling
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        if (searchTerm.trim()) {
-            // Simulate checking if the recipe exists (replace this with actual search logic)
-            const recipeExists = false; // Replace with actual condition based on your recipe data
-
-            if (recipeExists) {
-                navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
-            } else {
-                navigate('/error'); // Redirect to error page if recipe not found
-            }
-        }
-    };
-
+         if(searchTerm.trim()){
+            // navigate to the recipelist page with search query
+            navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+        } 
+         };
+       
+                
+// logout the user by removing their info from local storage
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('username');
